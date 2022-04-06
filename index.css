@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+body {
+  font-family: Nunito, sans-serif;
+}
+.image--container {
+  /* border: 1px solid red; */
+
+  /* width: 250px;
+  height: 270px; */
+}
+
+.image--item {
+  border-radius: 15px;
+  width: 290px;
+  height: 340px;
+  object-fit: cover;
+}
+
+h3 {
+  color: orange;
+  padding-left: 30px;
+}
+h1 {
+  font-size: 3em;
+  padding-left: 30px;
+}
