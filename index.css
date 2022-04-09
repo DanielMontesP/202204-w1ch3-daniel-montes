@@ -1,16 +1,134 @@
+:root {
+  --Orange: #ed6436;
+  --Black: black;
+  --White: white;
+}
 .container {
   display: flex;
   flex-direction: row;
   gap: 25px;
 }
+
 body {
   font-family: Nunito, sans-serif;
 }
-.image--container {
-  /* border: 1px solid red; */
+.header--menu {
+  text-align: right;
+  padding-right: 300px;
+  padding-bottom: 45px;
+}
+h1 {
+  font-size: 3em;
+  padding-left: 30px;
+}
 
-  /* width: 250px;
-  height: 270px; */
+h3 {
+  color: var(--Orange);
+  padding-left: 30px;
+}
+.image1--info--container {
+  visibility: hidden;
+  position: absolute;
+}
+img.image--item:hover .image1--info--container {
+  visibility: visible;
+}
+.image--header--logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 45px;
+}
+
+a {
+  padding-right: 40px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted white;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:link {
+  color: var(--Black);
+}
+
+a:visited {
+  color: var(--Black);
+}
+a:hover {
+  color: var(--Orange);
+  /* border-bottom: 2px solid var(--Orange); */
+  /* border-color: var(--Orange); */
+  /* border-style: none none solid none; */
+  /* text-decoration: underline; */
+}
+a.link--withmenu:hover::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  /* left: 60%; */
+  /* margin-left: -5px; */
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(13, 13, 13) transparent transparent transparent;
+}
+
+.first--title {
+  display: flex;
+  flex-direction: row;
+}
+.button--filter {
+  width: 180px;
+  height: 80px;
+  color: var(--White);
+  font-size: 1.2em;
+  margin: auto;
+
+  border-radius: 0 30px 30px 30px;
+  background: var(--Orange);
+  border-style: none;
+  font-family: Nunito, sans-serif;
+}
+.button--filter:hover {
+  width: 180px;
+  height: 80px;
+  color: var(--Orange);
+  font-size: 1.2em;
+  margin: auto;
+  border-radius: 0 30px 30px 30px;
+  background: none;
+  border: 2px solid var(--Orange);
+  font-family: Nunito, sans-serif;
+}
+.button--buynow:hover {
+  width: 180px;
+  height: 80px;
+  color: var(--White);
+  font-size: 1.2em;
+  margin: auto;
+  border-radius: 0 30px 30px 30px;
+  background: var(--Orange);
+  border: 2px solid var(--Orange);
+  font-family: Nunito, sans-serif;
+  position: relative;
+  left: 80%;
+}
+.button--buynow {
+  width: 180px;
+  height: 80px;
+  color: var(--Black);
+  font-size: 1.2em;
+  margin: auto;
+  border-radius: 0 30px 30px 30px;
+  background: none;
+  border: 2px solid var(--Orange);
+  font-family: Nunito, sans-serif;
+  position: fixed;
+  left: 80%;
+  top: 15px;
 }
 
 .image--item {
@@ -18,13 +136,4 @@ body {
   width: 290px;
   height: 340px;
   object-fit: cover;
-}
-
-h3 {
-  color: orange;
-  padding-left: 30px;
-}
-h1 {
-  font-size: 3em;
-  padding-left: 30px;
 }
